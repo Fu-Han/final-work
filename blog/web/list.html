@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+
+{% block title %}網誌{% endblock %}
+
+{% block content %}
+<head>
+    <div class="masthead">
+ <nav>
+            <ul class="nav nav-justified">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="https://www.facebook.com/Pika0820/?fref=ts">About</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"></script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="/">網誌</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse"></div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+</head>   
+<body >
+
+<h1>邱振哲 Pika Chiu。</h1>
+ <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/11056550_884588354954313_7392811921688469153_n.jpg?oh=81e0173673e3ff61f98da4df6fdcf00a&oe=57C2D78E" width="45%" align="left"/>
+<p>正從流行樂的地平線上冉冉升起，
+溫暖、厚實的嗓音，綿延不斷在耳邊傳頌出歌聲；
+當冷冽寒風吹過，總有一個身影站在離你不遠的地方燃燒發熱；早在10年以前，邱振哲就佇立在台灣的文化街頭，
+像恆星一樣照亮人心的光芒，讓一旁飄過的、
+為他停留的耳朵帶來絲絲溫暖，正如他深植人心的代表作「太陽」一樣，傳送出堅定、支撐的力量
+
+音樂的能量在他身上不斷散發，從台灣歌唱選秀節目，轉戰到中國，歷經「星光大道」、「中國好歌曲」、「完美星開幕」的洗禮過後，強化了他對各種音樂的包容力，在周華健老師提攜、與隊友們的激勵、讓他的表現進化到更為寬廣、穩定的演唱功力，如同恆星一般、發射到浩瀚銀河裡的各個星球。
+
+你可以選擇打開心裡那扇窗，也可以稍稍睜開眼皮，
+漏出些微空檔，讓音樂的光芒，一舉掃除心中堆積已久的晦暗，邱振哲會像太陽一樣，源源不絕地傳遞出光和熱，帶領我們走向更遼闊的音樂天地。
+
+個人經歷：
+街頭藝人出身，2003年14歲開始
+人生第一次演出至今，
+過千場的街頭Live表演與其他場合演出，
+每場街頭演出平均表演時間為7~9個小時
+平均一場演出歌曲數目為135~150首
+多數演唱個人創作與華語樂壇流行歌曲。
+
+個人經歷：
+「華視星光大道第四屆前三十三強」
+
+「受邀香港TVB超級巨聲歌唱比賽擔任踢館者成功，
+並參加該比賽前十八強」
+
+「台北市&新北市&台中市街頭藝人合計十一年演出資歷」
+
+「多所國高中大學公開活動受邀演出與擔任各校園歌唱比賽評審」
+
+「台北城市科技大學演藝科–街頭藝術&表演授課老師」
+
+「台北市立第一女子高級中學–流行音樂社指導老師」
+
+「We Can Market 假日市集–幫助受飢兒童義演演出歌手」
+
+「2011台北Drop Coffee House 售票小型Live演出」
+
+「2012~2013台北A House售票小型Live演出」
+
+「2012公館客家文化音樂節受邀演出」　
+
+「2013夢想騎士-社會工作團體表演藝術歌唱課授課老師」
+
+「2013台北阪急百貨音樂花房藝文場地受邀演出」
+
+「2014華人最大規模原創音樂舞台中國好歌曲晉級學員」
+
+「2014大陸央視完美星開幕以太陽創作曲進入複賽。」
+
+「2014Legacy個人售票演唱會門票完售」
+
+「2014河岸留言個人售票演唱會取得好成績」
+
+「2015超犀利趴犀利未來趴個人演唱會取得好成績」 </p> 
+        <h3> 以上  轉貼自 </h3>
+       <h3> <a href="https://www.facebook.com/Pika0820/photos/a.176215625791593.45833.175791099167379/933311006748714/?type=3&theater">關於夢想-邱振哲</a></h3>
+   <hr/>
+    </body>
+  <h3>你有 <strong>{{ posts.length }}</strong> 則留言!</h3>
+  <h3><a href="/post/new">留言</a></h3>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h3>{{ post.title }}</h3>
+        <h5><a href="/post/{{ post._id.toString() }}">Read post</a></h5>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

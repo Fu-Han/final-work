@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<head>
+    <div class="masthead">
+ <nav>
+            <ul class="nav nav-justified">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="https://www.facebook.com/Pika0820/?fref=ts">About</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"></script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="/">網誌</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse"></div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+</head>   
+   <h1 style="padding-left:150px;">回應</h1>
+  <form action="/post" method="post">
+    <p><input type="text" placeholder="留言人" name="title"></p>
+      <p><textarea placeholder="內文" name="body"></textarea></p>
+      <p><button>create</button></p>
+  </form>
+{% endblock %}
+
+
+           

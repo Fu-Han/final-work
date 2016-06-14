@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title>{% block title %}Blog{% endblock %}</title>
+  <style>
+ 
+
+
+        body {
+           padding:60px 50px 20px 50px;
+            background-image: url(http://appwk.baidu.com/naapi/doc/view?ih=810&o=jpg_6&iw=1080&ix=0&iy=0&aimw=1080&rn=1&doc_id=e6de402d6bd97f192379e908&pn=1&sign=75649468c5a0aca2b87c0753ef1dca00&type=1&app_ver=2.9.8.2&ua=bd_800_800_IncredibleS_2.9.8.2_2.3.7&bid=1&app_ua=IncredibleS&uid=&cuid=&fr=3&Bdi_bear=WIFI&from=3_10000&bduss=&pid=1&screen=800_800&sys_ver=2.3.7);
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+ p{  
+ width: 95%;
+
+  padding: 0 50px;
+}
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    #posts {
+      margin: 0;
+      padding: 0;
+    }
+
+    #posts li {
+      margin: 0px 20px;
+      padding: 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      list-style: none;
+      float: left;
+    }
+
+    #posts li:last-child {
+      border-bottom: none;
+    }
+
+
+    textarea {
+      width: 450px;
+      height: 200px;
+    }
+
+    input[type=text],
+    textarea {
+      border: 1px solid 			#DCDCDC;
+      border-top-color: 				#DCDCDC;
+      border-left-color: 			#DCDCDC;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: .8em;
+    }
+
+    input[type=text] {
+      width: 450px;
+    }
+    
+    button{
+     background-color:	royalblue; 
+    border-radius: 12px;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+ 
+    }
+  </style>
+
+<body>
+  <section id="content">
+    {% block content %}
+      <p>Missing content!</p>
+    {% endblock %}
+  </section>
+</body>
+</html>
